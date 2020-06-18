@@ -1,0 +1,63 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet"  href="{{ url_for('static', filename='css/slider.css') }}">
+    </head>
+
+
+<header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html">CHAIN<span>CODERS</span></a></h1>
+                <ul>
+                    <li><a href="{{ url_for('home')}}">Home</a></li>
+                    <li><a href="{{ url_for('documentation')}}">Documentaion</a></li>
+                    <li><a href="{{ url_for('home')}}">Predict</a></li>
+                    <li><a href="#">GraphSlides</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+
+<body>
+    <body>
+        <div class="slidershow middle">
+            
+          <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
+            <div class="slide s1">
+              <img src="{{ url_for('static', filename='css/1.jpg') }}" alt="64545">
+            </div>
+            <div class="slide">
+              <img src="{{ url_for('static', filename='css/2.jpg') }}" alt="">
+            </div>
+            <div class="slide">
+              <img src="{{ url_for('static', filename='css/3.jpg') }}" alt="">
+            </div>
+            <div class="slide">
+              <img src="{{ url_for('static', filename='css/4.jpg') }}" alt="">
+            </div>
+            <div class="slide">
+              <img src="{{ url_for('static', filename='css/5.jpg') }}" alt="">
+            </div>
+          </div>
+    
+          <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+            <label for="r5" class="bar"></label>
+          </div>
+        </div>
+      </body>    
+</body>
+</html>

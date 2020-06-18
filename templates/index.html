@@ -1,0 +1,43 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ML API</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+<header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html">CHAIN<span>CODERS</span></a></h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('documentation')}}">Documentaion</a></li>
+                    <li><a href="#">Predict</a></li>
+                    <li><a href="{{ url_for('slider')}}">GraphSlides</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+<body>
+    <div class="login">
+        <h1><b>PREDICTION OF WATER QUALITY</b></h1>
+        <br>
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="text" name="state" placeholder="STATE" required="required">
+            <input type="text" name="year" placeholder="YEAR" required="required"/>
+            <input type="text" name="npH" placeholder="PH" required="required" />
+            <input type="text" name="ndo" placeholder="D.O" required="required" />
+            <input type="text" name="nec" placeholder="EC" required="required" />
+            <input type="text" name="nbdo" placeholder="B.D.O" required="required" />
+            <input type="text" name="nna" placeholder="NITRATE QUANTITY" required="required" />
+            <button type="submit" class="btn btn3"><b>P r e d i c t</b></button>
+        </form>
+    <br><br>
+       <h1 style="color: rgb(40, 218, 194);font-size: small;">  {{ prediction_text }}  </h1>
+    </div>
+</body>
+</html>

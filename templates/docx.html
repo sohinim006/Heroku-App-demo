@@ -1,0 +1,45 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+
+<header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html">CHAIN<span>CODERS</span></a></h1>
+                <ul>
+                    <li><a href="{{ url_for('home')}}">Home</a></li>
+                    <li><a href="#">Documentaion</a></li>
+                    <li><a href="{{ url_for('home')}}">Predict</a></li>
+                    <li><a href="{{ url_for('slider')}}">GraphSlides</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+
+<body>
+    
+    <div class="login">
+        <h1><b>DOCUMENTATION OF THE PROJECT</b></h1>
+        <br>
+        <br>
+        <br>
+        <a href="https://drive.google.com/file/d/198OrduTwqFbs7OuTHuJ6o4FOfwzVr8o-/view?usp=sharing"><button type="submit" class="btn btn3"><b>C L I C K</b></button></a>
+    </div>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br>
+    <img class="image_d" src="{{ url_for('static', filename='css/statecodes.jpg') }}" alt="IMAGE IS BROKEN" style="width:30%;height:40%;display: block;
+    margin-left: 38%;
+    margin-right: 50%;border:2px solid crimson;">
+    
+</body>
+</html>
